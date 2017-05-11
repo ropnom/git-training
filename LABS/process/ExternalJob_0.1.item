@@ -2,9 +2,11 @@
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="" name="FileName" prompt="FileName?" promptNeeded="false" type="id_String" value="&quot;default.txt&quot;"/>
+    <contextParameter comment="" name="Folder" prompt="Folder?" promptNeeded="false" type="id_String" value="&quot;/default/"/>
   </context>
   <context confirmationNeeded="false" name="remote">
     <contextParameter comment="" name="FileName" prompt="FileName?" promptNeeded="false" type="id_String" value="&quot;remote.txt&quot;"/>
+    <contextParameter comment="" name="Folder" prompt="Folder?" promptNeeded="false" type="id_String" value="&quot;remote1&quot;"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
@@ -116,7 +118,7 @@
   </parameters>
   <node componentName="tFileTouch" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileTouch_1" show="false"/>
-    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/StudentFiles/DIAdvanced/&quot; + context.FileName"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/StudentFiles/DIAdvanced/&quot;+context.Folder + context.FileName"/>
     <elementParameter field="CHECK" name="CREATEDIR" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileTouch_1"/>
